@@ -1,5 +1,3 @@
-import { useRouter } from 'next/navigation';
-
 export default function FilePage({ params }: { params: { id: string } }) {
   const { id } = params;
 
