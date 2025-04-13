@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
 
 export default function Home() {
-  const [file, setFile] = useState<File | null>(null);
   const [qrCodeData, setQrCodeData] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,7 +16,6 @@ export default function Home() {
       return;
     }
     setError(null);
-    setFile(uploadedFile);
 
     // Upload the file to the server
     const formData = new FormData();
